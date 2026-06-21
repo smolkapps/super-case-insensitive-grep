@@ -1,0 +1,32 @@
+[package]
+name = "super-case-insensitive-grep"
+version = "0.1.0"
+edition = "2021"
+authors = ["smolkai <smolkai@users.noreply.github.com>"]
+description = "grep, but case-style-insensitive: one identifier pattern matches camelCase, snake_case, PascalCase, kebab-case and CONSTANT_CASE at once."
+license = "MIT"
+readme = "README.md"
+repository = ""
+keywords = ["grep", "search", "camelcase", "snakecase", "identifier"]
+categories = ["command-line-utilities", "text-processing"]
+default-run = "scig"
+
+[lib]
+name = "scig"
+path = "src/lib.rs"
+
+[[bin]]
+name = "scig"
+path = "src/main.rs"
+
+[dependencies]
+regex = "1.11"
+ignore = "0.4"
+
+[dev-dependencies]
+tempfile = "3"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

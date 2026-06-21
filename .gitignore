@@ -1,0 +1,10 @@
+# Rust build artifacts
+/target/
+
+# Cargo lockfile is kept for binaries, but a remote build may regenerate it;
+# we keep it locally. Uncomment to ignore if this becomes a library-only crate.
+# Cargo.lock
+
+# Editor / OS cruft
+*.swp
+.DS_Store
